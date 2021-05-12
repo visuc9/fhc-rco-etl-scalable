@@ -1,0 +1,9 @@
+/.env
+/App/utils/token_cache.bin
+/encryptsecret.py
+/ref/StLouis Proficy/Data/
+/ref/StLouis Proficy/Scripts/.RData
+/ref/StLouis Proficy/Scripts/StLouisProficy_RCO_MES_script.Rout
+/ref/StLouis Maple/Scripts/StLouisMaple_RCO_MES_script.Rout
+/ref/StLouis Maple/Scripts/.RData
+/ref/StLouis Maple/Data/
