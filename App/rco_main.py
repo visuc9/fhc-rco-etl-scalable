@@ -216,13 +216,13 @@ if __name__ == '__main__':
     # rco_database = sa.create_engine('postgresql://postgres:postgresql@localhost/rco')
     password='abc123@@'
     p = 'DRIVER='+'{ODBC Driver 17 for SQL Server}'+ ';' \
-        'SERVER=' + '192.168.1.7\\MSSQLSERVER2014' + ';' \
+        'SERVER=' + 'visqlserver.database.windows.net' + ';' \
         'DATABASE=' + 'RCO' + ';' \
-        'UID=' + 'SA' + ';' \
+        'UID=' + 'vi' + ';' \
         'PWD=' + password + ';' \
-        'PORT=' + '1433' + ';'
+       'PORT=' + '1433' + ';'
             
-    p = urllib.parse.quote_plus(p)
+    # p = urllib.parse.quote_plus(p)
     
     rco_database = sa.create_engine('mssql+pyodbc:///?odbc_connect=%s' %p)
     
