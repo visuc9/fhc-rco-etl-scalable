@@ -17,9 +17,10 @@ variables:
   tag: '$(Build.BuildId)'
 
   steps:
-   - bash :  |
-      eco  "repo name"
-
+   - pwsh: |
+       $s = (Get-Content "./pipelines/__init__.py").replace("0.0.1","0.0.$(Build.BuildID)") 
+       $s | Set-Content "./pipelines/__init__.py"
+   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
