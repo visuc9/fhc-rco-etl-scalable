@@ -16,6 +16,10 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
+  steps:
+   - bash :  |
+      eco  "repo name"
+
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
