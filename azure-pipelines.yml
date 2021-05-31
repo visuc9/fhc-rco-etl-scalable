@@ -16,10 +16,15 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
-  steps:
-   - pwsh: |
-       $s = (Get-Content "./App/rco_main.py").replace("aaa","abc123@@") 
-       $s | Set-Content "./App/rco_main.py"
+  # steps:
+  # - bash: |
+  #         FOO="some value"
+  #         echo "##vso[task.setvariable variable=FOO;isOutput=true]$FOO"
+  #   name: mystep
+
+  #     # Show output variable in the same job
+  # - bash: |
+  #         echo "$(mystep.FOO)"
    
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
