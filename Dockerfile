@@ -27,6 +27,7 @@ RUN apt-get install unixodbc-dev
 # copy the dependencies file to the working directory
 COPY requirements.txt .
 COPY encryptsecret.py .
+Copy appsettings.json .
 # install python dependencies
 RUN pip install -r requirements.txt
 
