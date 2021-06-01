@@ -214,7 +214,7 @@ if __name__ == '__main__':
 
     # Using local db
     # rco_database = sa.create_engine('postgresql://postgres:postgresql@localhost/rco')
-    password='aaa'
+    password='abc123@@'
     p = 'DRIVER='+'{ODBC Driver 17 for SQL Server}'+ ';' \
         'SERVER=' + 'visqlserver.database.windows.net' + ';' \
         'DATABASE=' + 'RCO' + ';' \
