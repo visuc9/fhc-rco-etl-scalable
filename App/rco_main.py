@@ -7,7 +7,7 @@ import pyodbc
 from datetime import datetime
 
 from pandas import json_normalize
-
+data=json.load(open('appsettings.json','r'))
 import App.etl.overall_etl
 import App.mdc as mdc
 import sqlalchemy as sa
@@ -214,10 +214,12 @@ if __name__ == '__main__':
 
     # Using local db
     # rco_database = sa.create_engine('postgresql://postgres:postgresql@localhost/rco')
+    Database=data['DataBase']
+    print (Database)
     password='abc123@@'
     p = 'DRIVER='+'{ODBC Driver 17 for SQL Server}'+ ';' \
         'SERVER=' + 'visqlserver.database.windows.net' + ';' \
-        'DATABASE=' + 'RCO' + ';' \
+        'DATABASE=' + Database + ';' \
         'UID=' + 'vi' + ';' \
         'PWD=' + password + ';' \
        'PORT=' + '1433' + ';'
